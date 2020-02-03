@@ -1,7 +1,6 @@
 FROM jupyter/scipy-notebook:latest
 
 # Install .NET CLI dependencies.
-
 ARG NB_USER=jovyan
 ARG NB_UID=1000
 ENV USER ${NB_USER}
@@ -47,8 +46,8 @@ ENV DOTNET_RUNNING_IN_CONTAINER=true \
 # Trigger first run experience
 RUN dotnet help
 
-# Copy demo notebooks
-COPY ./LoadingData/CaliforniaHousing/* ${HOME}/LoadingData/CaliforniaHousing/
+# Copy all notebooks into container
+COPY ./* ${HOME}/
 
 # Copy package sources
 COPY ./NuGet.config ${HOME}/nuget.config
@@ -66,4 +65,4 @@ RUN echo "$PATH"
 RUN dotnet try jupyter install
 
 # Set root to notebook folder
-WORKDIR ${HOME}/LoadingData/CaliforniaHousing/
+WORKDIR ${HOME}/
