@@ -65,9 +65,6 @@ RUN dotnet tool install -g Microsoft.dotnet-interactive --add-source "https://do
 ENV PATH="${PATH}:${HOME}/.dotnet/tools"
 RUN echo "$PATH"
 
-# Install Powershell (required by the jupyter kernel)
-RUN dotnet tool install --global PowerShell
-
 # Install kernel specs
 RUN dotnet interactive jupyter install
 
