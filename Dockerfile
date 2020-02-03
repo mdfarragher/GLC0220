@@ -50,7 +50,7 @@ RUN dotnet help
 
 # Copy notebooks
 
-COPY ./* ${HOME}/
+# DISABLED AS TEST - COPY ./* ${HOME}/
 
 # Copy package sources
 
