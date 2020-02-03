@@ -62,7 +62,7 @@ ENV PATH="${PATH}:${HOME}/.dotnet/tools"
 RUN echo "$PATH"
 
 # Install C# kernel for Jupyter
-RUN dotnet try jupyter install
+RUN dotnet-try jupyter install
 
 # Set root to notebook folder
 WORKDIR ${HOME}/
