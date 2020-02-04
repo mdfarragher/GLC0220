@@ -52,7 +52,7 @@ RUN dotnet help
 COPY ./BinaryClassification/* ${HOME}/BinaryClassification/
 COPY ./Clustering/* ${HOME}/Clustering/
 COPY ./MulticlassClassification/* ${HOME}/MulticlassClassification/
-COPY ./NeuralNetworks/* ${HOME}/NeuralNetworks/
+# COPY ./NeuralNetworks/* ${HOME}/NeuralNetworks/
 COPY ./Recommendation/* ${HOME}/Recommendation/
 COPY ./Regression/* ${HOME}/Regression/
 
