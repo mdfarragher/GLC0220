@@ -50,7 +50,7 @@ RUN dotnet help
 
 # Copy notebooks
 
-# DISABLED AS TEST - COPY ./* ${HOME}/
+COPY ./* ${HOME}/
 
 # Copy package sources
 
@@ -60,7 +60,7 @@ RUN chown -R ${NB_UID} ${HOME}
 USER ${USER}
 
 # Install Microsoft.DotNet.Interactive
-RUN dotnet tool install -g Microsoft.dotnet-interactive --add-source "https://dotnet.myget.org/F/dotnet-try/api/v3/index.json"
+RUN dotnet tool install -g Microsoft.dotnet-interactive --version 1.0.110308 --add-source "https://dotnet.myget.org/F/dotnet-try/api/v3/index.json"
 
 ENV PATH="${PATH}:${HOME}/.dotnet/tools"
 RUN echo "$PATH"
