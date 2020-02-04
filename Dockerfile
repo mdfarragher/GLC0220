@@ -49,11 +49,14 @@ ENV DOTNET_RUNNING_IN_CONTAINER=true \
 RUN dotnet help
 
 # Copy notebooks
-
-COPY ./* ${HOME}/
+COPY ./BinaryClassification/* ${HOME}/BinaryClassification/
+COPY ./Clustering/* ${HOME}/Clustering/
+COPY ./MulticlassClassification/* ${HOME}/MulticlassClassification/
+COPY ./NeuralNetworks/* ${HOME}/NeuralNetworks/
+COPY ./Recommendation/* ${HOME}/Recommendation/
+COPY ./Regression/* ${HOME}/Regression/
 
 # Copy package sources
-
 COPY ./NuGet.config ${HOME}/nuget.config
 
 RUN chown -R ${NB_UID} ${HOME}
