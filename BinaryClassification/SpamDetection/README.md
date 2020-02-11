@@ -295,5 +295,3 @@ Which metrics did you pick to evaluate the model? And what do the values say abo
 And what about the four test messages? Dit the model accurately predict which ones are spam?
 
 Think about the code in this assignment. How could you improve the accuracy of the model even more? What are your best AUC values after optimization? 
-
-Share your results in our group!
