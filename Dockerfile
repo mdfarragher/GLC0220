@@ -50,6 +50,7 @@ COPY ./MulticlassClassification/* ${HOME}/MulticlassClassification/
 COPY ./NeuralNetworks/* ${HOME}/NeuralNetworks/
 COPY ./Recommendation/* ${HOME}/Recommendation/
 COPY ./Regression/* ${HOME}/Regression/
+COPY ./AnomalyDetection/* ${HOME}/AnomalyDetection/
 
 # Remove the work folder
 RUN rm -rf ./work
